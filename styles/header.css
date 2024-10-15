@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-header {
+    position: sticky;
+    top: 0;
+    background-color: #383838  ;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.logo-header {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.nav-header {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.main-header-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-header-list-name {
+    display: flex;
+    gap: 20px; 
+}
+
+.item_list_header {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f4a460;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.item_list_header:hover {
+    color: rgb(80, 150, 50);
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+.button-text-header {
+    display: inline-block;
+    background-color: blue;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.button-text-header:hover {
+    background-color: rgb(0, 104, 250);
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 1366px) {
+    .main-header {
+        padding: 15px 30px;
+    }
+
+    .item_list_header {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo-header {
+        margin-bottom: 10px;
+        align-self: center;
+    }
+
+    .button-text-header {
+        position: relative; 
+        margin-top: 10px; 
+        align-self: center;
+    }
+
+    .nav-header {
+        margin-bottom: 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-header {
+        justify-content: center;
+    }
+
+    .main-header-list-name {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item_list_header {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 5px 10px;
+    }
+
+    .item_list_header {
+        font-size: 0.8rem;
+        padding: 8px 0;
+    }
+
+    .button-text-header {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}

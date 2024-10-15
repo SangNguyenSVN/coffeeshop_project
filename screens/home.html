@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SangNguyen</title>
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+</head>
+
+<body>
+    <audio id="background-audio" src="/public/audio/người cuốn.mp3" controls autoplay loop></audio>
+    <header>
+        <div class="container-header">
+            <div class="main-header">
+                <div class="logo-header">
+                    <a href="../screens/home.html">
+                        <img src="../public/logo.svg" alt="Coffee Shop Logo">
+                    </a>
+                </div>
+                <nav class="nav-header">
+                    <ul class="main-header-list">
+                        <li class="main-header-list-name">
+                            <a class="item_list_header" href="../screens/home.html">Home</a>
+                            <a class="item_list_header" href="../screens/about.html">About Us</a>
+                            <a class="item_list_header" href="../screens/product.html">Products</a>
+                            <a class="item_list_header" href="../screens/news.html">Carrers</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="button-text-header" href="../screens/login.html">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="slider-container">
+            <!-- <button class="nav-button prev" onclick="prevSlide()" disabled>&lt;</button> -->
+            <div class="slider-window">
+                <ul class="slider-list">
+                    <li class="slide">
+                        <div class="container-item-card">
+                            <div class="view-img">
+                                <img src="../public/img/sliders/1.png" alt="Image 1" />
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slide">
+                        <div class="container-item-card">
+                            <div class="view-img">
+                                <img src="../public/img/sliders/2.png" alt="Image 2" />
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Add more slides as necessary -->
+                </ul>
+            </div>
+            <!-- <button class="nav-button next" onclick="nextSlide()">&gt;</button> -->
+            <div class="dot-container">
+                <span class="dot" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <!-- Add more dots based on the number of slides -->
+            </div>
+        </div>
+
+        <div class="menu-container">
+            <h1 class="menu-title">Café Menu</h1>
+
+            <div class="menu-columns">
+                <!-- Cột 1: Hot Coffee và Cold Coffee -->
+                <div class="menu-column">
+                    <h2 class="menu-category">Hot Coffee</h2>
+                    <ul class="menu-list">
+                        <li><span class="menu-item-name">Cappuccino</span><span class="menu-item-price">$2.99</span>
+                        </li>
+                        <li><span class="menu-item-name">Café Latte</span><span class="menu-item-price">$2.99</span>
+                        </li>
+                        <li><span class="menu-item-name">Espresso</span><span class="menu-item-price">$1.99</span></li>
+                        <li><span class="menu-item-name">Velvet Coffee</span><span class="menu-item-price">$3.49</span>
+                        </li>
+                    </ul>
+                    <h2 class="menu-category">Cold Coffee</h2>
+                    <ul class="menu-list">
+                        <li><span class="menu-item-name">Frappe Shake</span><span class="menu-item-price">$3.99</span>
+                        </li>
+                        <li><span class="menu-item-name">Iced Coffee</span><span class="menu-item-price">$2.49</span>
+                        </li>
+                        <li><span class="menu-item-name">Iced Tea</span><span class="menu-item-price">$1.99</span></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 2: Snacks và Dessert -->
+                <div class="menu-column">
+                    <h2 class="menu-category">Snacks</h2>
+                    <ul class="menu-list">
+                        <li><span class="menu-item-name">Sandwich</span><span class="menu-item-price">$3.99</span></li>
+                        <li><span class="menu-item-name">Veggie Burger</span><span class="menu-item-price">$4.99</span>
+                        </li>
+                    </ul>
+                    <h2 class="menu-category">Dessert</h2>
+                    <ul class="menu-list">
+                        <li><span class="menu-item-name">Cheesecake</span><span class="menu-item-price">$3.99</span>
+                        </li>
+                        <li><span class="menu-item-name">Brownies</span><span class="menu-item-price">$2.99</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="main-footer">
+                <div class="logo-footer">
+                    <img src="../public/logo.svg">
+                </div>
+                <div class="left-content">
+                    <h3 class="title_product">About Coffee</h3>
+                    <p>We offer the highest quality coffee<br>
+                        from the world's famous coffee-growing regions.<br>
+                        Come and enjoy the unique flavors<br>
+                        and experience wonderful moments of relaxation!</p>
+                </div>
+                <nav class="nav-footer">
+                    <ul class="main-footer-list">
+                        <li>
+                            <p class="main-footer-list-name">Contact Information</p>
+                            <ul class="main-footer-list-item">
+                                <li>
+                                    <a class="main-footer-list-item-name" href="#">Email: info@coffee.com</a>
+                                    <a class="main-footer-list-item-name" href="#">Phone: +1 234 567 890</a>
+                                    <a class="main-footer-list-item-name" href="#">Address: 123 Coffee St, City</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p class="main-footer-list-name">Terms & Policies</p>
+                            <ul class="main-footer-list-item">
+                                <li>
+                                    <a class="main-footer-list-item-name" href="#">Privacy Policy</a>
+                                    <a class="main-footer-list-item-name" href="#">Terms of Service</a>
+                                    <a class="main-footer-list-item-name" href="#">Refund Policy</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    let autoSlideInterval = setInterval(() => {
+        nextSlide();
+    }, 3000); // Slide every 3 seconds
+
+    // Pause slider on hover
+    document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+        clearInterval(autoSlideInterval);
+    });
+
+    // Resume slider on mouse leave
+    document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+        autoSlideInterval = setInterval(() => {
+            nextSlide();
+        }, 3000);
+    });
+
+</script>

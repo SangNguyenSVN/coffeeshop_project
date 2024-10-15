@@ -1,0 +1,212 @@
+html,
+body {
+    background-color: #484848;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Job Container */
+.job-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Job Navigation */
+.job-navigation {
+    justify-content: flex-end;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Style cho ô tìm kiếm */
+/* Job Navigation */
+.job-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px;
+}
+
+/* Style cho ô tìm kiếm */
+.search-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+    flex-grow: 1;
+    max-width: 300px; /* Đặt chiều rộng tối đa cho ô tìm kiếm */
+}
+
+/* Nút tìm kiếm */
+.button-search {
+    background-color: #ffffff;
+    color: #484848;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.button-search:hover {
+    background-color: #dcdcdc; /* Màu nền khi hover */
+}
+/* Khối Cửa Hàng và Khối Văn Phòng */
+.job-list-container {
+    display: flex;
+    /* Hiển thị theo dòng */
+    justify-content: space-between;
+    /* Phân bổ khoảng cách giữa các khối */
+    flex-wrap: wrap;
+    /* Cho phép các khối wrap khi không đủ không gian */
+    width: 100%;
+    /* Để khối chiếm 100% chiều rộng */
+}
+
+/* Khối Cửa Hàng và Khối Văn Phòng */
+.job-list,
+.job-office {
+    background-color: #383838;
+    /* Màu nền khối */
+    color: #ffffff;
+    /* Màu chữ trắng để tạo độ tương phản */
+    padding: 20px;
+    /* Padding cho từng khối */
+    border-radius: 8px;
+    /* Bo tròn các góc */
+    width: 45%;
+    /* Chiều rộng khối cho desktop */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng cho khối */
+    text-align: center;
+    /* Căn giữa nội dung trong khối */
+    margin-bottom: 20px;
+    /* Khoảng cách giữa các khối */
+}
+
+h2 {
+    color: #ffffff;
+    /* Đổi màu tiêu đề thành trắng */
+    margin-bottom: 15px;
+    /* Khoảng cách dưới cho tiêu đề */
+    font-size: 24px;
+    /* Kích thước chữ tiêu đề */
+    font-weight: bold;
+    /* Đậm tiêu đề */
+}
+
+.job-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+li:last-child {
+    border-bottom: none;
+    /* Xóa đường viền cho mục cuối cùng */
+}
+
+/* Style for job details */
+details {
+    cursor: pointer;
+    /* Đổi con trỏ khi hover */
+}
+
+summary {
+    font-weight: bold;
+    /* Đậm tiêu đề */
+}
+
+/* Nút liên hệ */
+.button-contact {
+    height: 40px;
+    /* Chiều cao cho nút */
+    line-height: 40px;
+    /* Căn giữa chữ trong nút */
+    background-color: #ffffff;
+    /* Màu nền của nút */
+    color: #484848;
+    /* Màu chữ cho nút */
+    padding: 0 20px;
+    /* Padding ngang cho nút */
+    border: none;
+    /* Xóa đường viền */
+    border-radius: 5px;
+    /* Bo tròn các góc */
+    margin: 0 10px;
+    /* Khoảng cách giữa các nút */
+    cursor: pointer;
+    /* Đổi con trỏ khi hover */
+    text-decoration: none;
+    /* Xóa gạch chân */
+    font-size: 16px;
+    /* Kích thước chữ trên nút */
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.button-contact:hover {
+    background-color: #dcdcdc;
+    /* Màu nền khi hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .job-list,
+    .job-office {
+        width: 100%;
+        /* Chiều rộng 100% cho tablet và mobile */
+    }
+
+    h2 {
+        font-size: 20px;
+        /* Giảm kích thước chữ tiêu đề */
+    }
+
+    .button-search,
+    .button-contact {
+        font-size: 14px;
+        /* Giảm kích thước chữ trên nút */
+        padding: 8px 16px;
+        /* Điều chỉnh kích thước nút */
+    }
+}
+
+@media (max-width: 480px) {
+    .job-container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    .button-search,
+    .button-contact {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

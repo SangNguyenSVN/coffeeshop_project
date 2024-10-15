@@ -1,0 +1,275 @@
+html, body {
+    background-color: #484848;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}/* Style for the slider container */
+#background-audio {
+    display: none; /* Hoặc visibility: hidden; */
+}
+
+.container {
+    max-width: 1200px; /* Đảm bảo container cha có chiều rộng tối đa */
+    margin: 0 auto; /* Giữa tất cả các phần tử */
+    width: 100%; /* Đảm bảo rằng container chiếm 100% chiều rộng */
+}
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+/* Navigation buttons */
+.nav-button {
+    opacity: 0;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.nav-button:disabled {
+    cursor: default;
+}
+
+/* Slider window container */
+.slider-window {
+    display: flex; /* Flexbox để các slide nằm cạnh nhau */
+    animation: slideAnimation 10s infinite; /* Thay đổi thời gian slide ở đây */
+}
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    40% { transform: translateX(-100%); }
+    60% { transform: translateX(-100%); }
+    80% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+
+/* Slider list that holds the slides */
+.slider-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%; /* Đảm bảo chiều rộng tổng thể */
+}
+
+.slide {
+    width: 100%; /* Đảm bảo chiều rộng mỗi slide bằng chiều rộng của container */
+    flex-shrink: 0; /* Ngăn chặn thu nhỏ slide */
+}
+/* Container for the content of the slides */
+.container-item-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Image container */
+.view-img {
+    position: relative;
+    width: 90%; /* Đảm bảo chiếm 100% chiều rộng */
+    height: 400px; /* Đảm bảo chiều cao cố định */
+    overflow: hidden; /* Đảm bảo ảnh không vượt ra ngoài */
+    border-radius: 20px;
+}
+
+.view-img img {
+    width: 100%; /* Chiều rộng hình ảnh */
+    height: 100%; /* Chiều cao hình ảnh */
+    object-fit: cover; /* Hoặc sử dụng contain nếu cần */
+}
+
+/* Dots for navigation */
+.dot-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Hover effects */
+.slider-container:hover .dot-container {
+    opacity: 1;
+}
+
+.slider-container:hover .nav-button {
+    opacity: 1;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #484848;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .nav-button {
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .view-img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-button {
+        font-size: 1.75rem;
+        padding: 0 0.75rem;
+    }
+
+    .view-img {
+        height: 175px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav-button {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .view-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 1366px) {
+    .nav-button {
+        font-size: 2.25rem;
+        padding: 0 1.25rem;
+    }
+
+    .view-img {
+        height: 225px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .nav-button {
+        font-size: 2.5rem;
+        padding: 0 1.5rem;
+    }
+
+    .view-img {
+        height: 250px;
+    }
+}
+
+/* Menu container */
+.menu-container {
+    max-width: 87%; /* Giới hạn chiều rộng tối đa của menu */
+    margin: 0 auto; /* Giữa menu trong container */
+    background-color: #2c2c2c; /* Màu nền menu */
+    color: #fff; /* Màu chữ menu */
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f4a460;
+}
+
+/* Flexbox for two columns */
+.menu-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Each menu column */
+.menu-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* Menu categories */
+.menu-category {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #f4a460;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styling the menu list */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.menu-item-name {
+    float: left;
+}
+
+.menu-item-price {
+    float: right;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 5px 0;
+    border-bottom: 1px solid #666;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive menu adjustments */
+@media screen and (max-width: 768px) {
+    .menu-columns {
+        flex-direction: column;
+    }
+
+    .menu-column {
+        padding: 10px 0;
+    }
+
+    .menu-item-name,
+    .menu-item-price {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-title {
+        font-size: 2rem;
+    }
+
+    .menu-category {
+        font-size: 1.2rem;
+    }
+
+    .menu-list li {
+        font-size: 1rem;
+    }
+}

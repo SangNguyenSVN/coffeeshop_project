@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #484848; /* Dark background */
+  margin: 0;
+  padding: 0;
+}
+
+.title_product {
+  color: #fff; /* Title color for better contrast */
+}
+
+.container_product {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff; /* Ensure text is visible against the dark background */
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.item {
+  background-color: #2c2c2c; /* Slightly lighter than background */
+  border: 1px solid #555; /* Darker border for contrast */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add box-shadow transition */
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff; /* Heading color */
+}
+
+.item p {
+  color: #bbb; /* Lighter gray for paragraph text */
+  font-size: 14px;
+}
+
+.item.hidden {
+  display: none;
+}
+
+.show-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease; /* Transition for button */
+}
+
+.show-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.show-button:focus {
+  outline: 2px solid #fff; /* Outline for accessibility */
+}

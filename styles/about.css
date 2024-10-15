@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f3e4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.container-header-about h1 {
+    font-size: 36px;
+    margin: 10px 0;
+    
+}
+
+.container-header-about h2 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.container-content-about {
+    margin-top: 20px;
+}
+
+.container-about-text {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.container-images-about {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Cho phép hình ảnh xuống dòng nếu không đủ chỗ */
+}
+
+.container-image-item {
+    flex: 1 1 200px; /* Chiều rộng tối thiểu 200px */
+    margin: 10px; /* Thêm khoảng cách giữa các hình ảnh */
+}
+
+.container-image-item img {
+    width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng của khối chứa */
+    height: auto;
+    border-radius: 8px; /* Thêm bo góc cho hình ảnh */
+}
+
+.container-footer-about {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* Loại bỏ dấu chấm đầu dòng */
+.container-about-text ul {
+    list-style-type: none; /* Xóa dấu chấm đầu dòng */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+/* Tăng khoảng cách giữa các mục */
+.container-about-text p {
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các mục */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container-header-about h1 {
+        font-size: 28px; /* Kích thước tiêu đề cho màn hình nhỏ hơn */
+    }
+
+    .container-header-about h2 {
+        font-size: 20px; /* Kích thước phụ đề cho màn hình nhỏ hơn */
+    }
+
+    .container-about-text {
+        font-size: 14px; /* Kích thước văn bản cho màn hình nhỏ hơn */
+    }
+
+    .container-images-about {
+        flex-direction: column; /* Chuyển các hình ảnh thành cột */
+        align-items: center; /* Căn giữa hình ảnh */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-header-about h1 {
+        font-size: 24px; /* Kích thước tiêu đề cho màn hình di động */
+    }
+
+    .container-header-about h2 {
+        font-size: 18px; /* Kích thước phụ đề cho màn hình di động */
+    }
+
+    .container-about-text {
+        font-size: 12px; /* Kích thước văn bản cho màn hình di động */
+    }
+
+    .container-images-about {
+        flex-direction: column; /* Các hình ảnh sẽ được sắp xếp theo chiều dọc */
+    }
+
+    .container-image-item {
+        flex: 1 1 100%; /* Các hình ảnh sẽ chiếm toàn bộ chiều rộng */
+    }
+}
+
+/* Các cải tiến thêm */
+.container-about-text ul li {
+    margin-bottom: 10px; /* Khoảng cách giữa các mục trong danh sách */
+    text-align: left; /* Căn trái văn bản trong danh sách */
+}
+
+.container-about-text p {
+    line-height: 1.6; /* Tăng chiều cao dòng để dễ đọc hơn */
+}
+ul {
+    list-style-type: none; /* Xóa dấu chấm đầu dòng */
+    padding: 0; /* Bỏ padding */
+    margin: 0; /* Bỏ margin */
+}

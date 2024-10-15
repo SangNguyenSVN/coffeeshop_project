@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-footer {
+    margin-top: 20px;
+    max-width: 100%;
+    background-color: #383838;
+    padding: 40px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 40px; /* Khoảng cách giữa các phần tử */
+}
+
+.logo-footer {
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.left-content {
+    flex-grow: 1;
+    text-align: left;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff; /* Màu chữ trắng cho dễ đọc */
+}
+
+.left-content h3 {
+    color: #ffffff; /* Màu chữ tiêu đề */
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Kích thước tiêu đề lớn hơn */
+}
+
+.left-content p {
+    line-height: 1.6; /* Tăng chiều cao dòng cho dễ đọc */
+    color: #dddddd; /* Màu chữ cho mô tả */
+}
+
+.nav-footer {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-footer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px; /* Khoảng cách giữa các danh mục */
+    flex-wrap: wrap;
+}
+
+.main-footer-list-name {
+    font-weight: bold;
+    color: #ffffff; /* Màu chữ cho tên mục */
+    margin-bottom: 15px;
+    font-size: 1.2rem; /* Kích thước chữ cho tên mục */
+}
+
+.main-footer-list-item {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-footer-list-item-name {
+    color: #dddddd; /* Màu chữ cho các mục con */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+.main-footer-list-item-name:hover {
+    color: rgb(0, 100, 240); /* Màu khi hover */
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column; /* Chuyển thành cột trên màn hình nhỏ */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .nav-footer {
+        justify-content: center; /* Căn giữa menu */
+    }
+
+    .left-content {
+        margin-bottom: 20px; /* Khoảng cách dưới cho left content */
+        text-align: center; /* Căn giữa nội dung */
+    }
+}
